@@ -57,7 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CoinRotate.cs" />
+    <Compile Include="Assets\Scripts\ShelfGenerator.cs" />
+    <Compile Include="Assets\Scripts\PlayerJump.cs" />
+    <Compile Include="Assets\Scripts\PrefabMovement.cs" />
+    <Compile Include="Assets\Scripts\CoinGenerator.cs" />
+    <Compile Include="Assets\Scripts\PlayerRotation.cs" />
+    <Compile Include="Assets\Scripts\DestroyPrefabs.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\CrateGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

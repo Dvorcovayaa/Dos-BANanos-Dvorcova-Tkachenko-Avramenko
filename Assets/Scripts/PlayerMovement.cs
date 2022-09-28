@@ -5,10 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody Rigidbody;
-    float jumpAmount = 4.5f;
     void Start()
     {
- 
+
     }
 
     void FixedUpdate()
@@ -21,9 +20,6 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = transform.position + new Vector3(5, 0, 0) * Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Rigidbody.AddForce(new Vector3(0, 2, 0) * jumpAmount, ForceMode.VelocityChange);
-        }
+       
     }
 }
