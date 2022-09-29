@@ -23,7 +23,7 @@ public class CoinCounter : MonoBehaviour
             if (coinCount%10 == 0) //Если количество монеток кратно 10
             {
                 HealthCounter.healthCount++; //Добавляем к ХП единицу
-                FindObjectOfType<Text>().text = HealthCounter.healthCount.ToString(); //Записываем в счетчик
+                HealthCounter.FindObjectOfType<Text>().text = HealthCounter.healthCount.ToString(); //Записываем в счетчик
             }
         }
 

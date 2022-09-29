@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\CrateGenerator.cs" />
     <Compile Include="Assets\Scripts\HealthCounter.cs" />
+    <Compile Include="Assets\Scripts\JumpAnimation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

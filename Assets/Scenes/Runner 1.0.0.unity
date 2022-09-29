@@ -194,7 +194,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: '0
+
+'
 --- !u!222 &178982067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2156,7 +2158,7 @@ GameObject:
   - component: {fileID: 5500645778148417841}
   - component: {fileID: 5500645778148417840}
   - component: {fileID: 5500645778148417839}
-  - component: {fileID: 5500645778148417838}
+  - component: {fileID: 5500645778148417845}
   - component: {fileID: 5500645778148417837}
   - component: {fileID: 5500645778148417836}
   - component: {fileID: 5500645778148417835}
@@ -2229,19 +2231,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &5500645778148417838
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5500645778148417833}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.033107426, y: 0.09869303, z: 0.03516279}
-  m_Center: {x: -0.0017577983, y: 0.049027108, z: 0.0030976331}
 --- !u!114 &5500645778148417839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2307,7 +2296,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &5500645778148417844
 BoxCollider:
@@ -2320,8 +2309,20 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.037731323, y: 0.10658117, z: 0.037358973}
-  m_Center: {x: -0.001966748, y: 0.046686314, z: 0.002682051}
+  m_Size: {x: 0.02204231, y: 0.10658117, z: 0.05703166}
+  m_Center: {x: -0.001689042, y: 0.046686314, z: 0.004736194}
+--- !u!114 &5500645778148417845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5500645778148417833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0877acf908724a4a8b8abc0f068e1b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5534449362743589094
 Transform:
   m_ObjectHideFlags: 0
