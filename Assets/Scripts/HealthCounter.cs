@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthCounter : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class HealthCounter : MonoBehaviour
             if(healthCount <= 0) //Если ХП меньше или равен нулю
             {
                 Destroy(this.gameObject); //Уничтожаем персонажа
+                SceneManager.LoadScene(2);
             }
         }
     }

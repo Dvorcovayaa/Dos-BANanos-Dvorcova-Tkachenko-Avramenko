@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{68DC1CD4-B8B4-1F7B-5747-ED938893AD83}</ProjectGuid>
+    <ProjectGuid>{64E2F6C6-1576-AED7-02C5-6D94F5E99C09}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\SkriptExit.cs" />
     <Compile Include="Assets\Scripts\CoinRotate.cs" />
     <Compile Include="Assets\Scripts\ShelfGenerator.cs" />
     <Compile Include="Assets\Scripts\PlayerJump.cs" />
@@ -64,8 +65,10 @@
     <Compile Include="Assets\Scripts\CoinCounter.cs" />
     <Compile Include="Assets\Scripts\DestroyPrefabs.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\ScriptStart.cs" />
     <Compile Include="Assets\Scripts\CrateGenerator.cs" />
     <Compile Include="Assets\Scripts\HealthCounter.cs" />
+    <Compile Include="Assets\Scripts\ScriptMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
