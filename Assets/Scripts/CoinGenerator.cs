@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class CoinGenerator : MonoBehaviour
 {
-    public GameObject Coin;
-    void Start()
+    public GameObject Coin; //Публичное поле с объектом монетки
+    void Start() //Обрабатывается перед отрисовкой кадра
     {
-        StartCoroutine(GenerateCoins());
+        StartCoroutine(GenerateCoins()); //Стартуем куратину
     }
     IEnumerator GenerateCoins ()
     {
-        while (true)
+        while (true) //Вечный цикл
         {
-            Instantiate(Coin, new Vector3(Random.Range(-10f, 9.7f), 1.3f, 30), Quaternion.identity);
-            yield return new WaitForSeconds(15f);
+            Instantiate(Coin, new Vector3(Random.Range(-10f, 9.7f), 1.3f, 30), Quaternion.identity); //Создаем префаб монетки
+            yield return new WaitForSeconds(15f); //Каждые 15 секунд
         }
-    }
-
-    void Update()
-    {
-        
     }
 }

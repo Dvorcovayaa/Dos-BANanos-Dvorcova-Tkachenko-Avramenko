@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class DestroyPrefabs : MonoBehaviour
 {
-    void Start()
+    void FixedUpdate() //Обрабатывается один раз каждый отрезок времени
     {
-        
-    }
-
-    void FixedUpdate()
-    {
-        if (transform.position.z <= -130)
+        if (transform.position.z <= -140) //Если позиция префаба меньше -140
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject); //Уничтожаем его
         }
     }
 }

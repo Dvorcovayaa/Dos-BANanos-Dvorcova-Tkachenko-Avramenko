@@ -1,24 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinCounter : MonoBehaviour
 {
-    int coinCount;
-    public Text Text;
-    void Start()
-    {
+    static public int coinCount; //Кол-во монеток
+    public Text Text; //Публичное поле с текстом
 
-    }
-    void OnTriggerStay(Collider Collider)
+    void Start() //Обрабатывается перед отрисовкой кадра
     {
-        if (Collider.CompareTag("Player")) coinCount++;
-        Destroy(this.gameObject);
-        Text.text = coinCount.ToString();
+        coinCount = 0; //Определяем начальное кол-во монеток
     }
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider Collider) //При срабатывании триггера
     {
+        if (Collider.CompareTag("Coin")) //Если объект с триггером имеет тэг "Coin"
+        {
+            Collider.gameObject.GetComponent<Collider>().enabled = false; //Отключаем его коллайдер
+            Destroy(Collider.gameObject); //Уничтожаем его
+            coinCount++; //Прибавляем монетку
+            Text.text = coinCount.ToString(); //Записываем в счетчик
+            if (coinCount%10 == 0) //Если количество монеток кратно 10
+            {
+                HealthCounter.healthCount++; //Добавляем к ХП единицу
+                FindObjectOfType<Text>().text = HealthCounter.healthCount.ToString(); //Записываем в счетчик
+            }
+        }
 
     }
 }

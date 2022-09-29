@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody Rigidbody;
-    void Start()
+    void FixedUpdate() //Обрабатывается один раз каждый отрезок времени
     {
-
-    }
-
-    void FixedUpdate()
-    {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A)) //При нажатой клавише "A"
         {
-            transform.position = transform.position + new Vector3(-5, 0, 0) * Time.deltaTime;
+            transform.position = transform.position + new Vector3(-5, 0, 0) * Time.deltaTime; //Меняем позицию персонажа по X влево
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D)) //При нажатой клавише "D"
         {
-            transform.position = transform.position + new Vector3(5, 0, 0) * Time.deltaTime;
+            transform.position = transform.position + new Vector3(5, 0, 0) * Time.deltaTime; //Меняем позицию персонажа по X вправо
         }
        
     }

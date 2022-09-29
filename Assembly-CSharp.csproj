@@ -61,10 +61,11 @@
     <Compile Include="Assets\Scripts\PlayerJump.cs" />
     <Compile Include="Assets\Scripts\PrefabMovement.cs" />
     <Compile Include="Assets\Scripts\CoinGenerator.cs" />
-    <Compile Include="Assets\Scripts\PlayerRotation.cs" />
+    <Compile Include="Assets\Scripts\CoinCounter.cs" />
     <Compile Include="Assets\Scripts\DestroyPrefabs.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\CrateGenerator.cs" />
+    <Compile Include="Assets\Scripts\HealthCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

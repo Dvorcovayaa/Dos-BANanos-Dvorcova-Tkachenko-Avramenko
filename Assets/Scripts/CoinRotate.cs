@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class CoinRotate : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void Update() //Обрабатывается каждый кадр
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Rotate(new Vector3(0, 75, 0) * Time.deltaTime);
+        transform.Rotate(new Vector3(0, 75, 0) * Time.deltaTime); //Меняем вращение монетки относительно оси Y
     }
 }
