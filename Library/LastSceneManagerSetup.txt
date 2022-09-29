@@ -1,5 +1,17 @@
 sceneSetups:
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 - path: Assets/Scenes/Runner 1.0.0.unity
+=======
+- path: Assets/Scenes/SampleScene.unity
+>>>>>>> Stashed changes
+=======
+- path: Assets/Scenes/SampleScene.unity
+>>>>>>> Stashed changes
+=======
+- path: Assets/Scenes/SampleScene.unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
   isSubScene: 0
