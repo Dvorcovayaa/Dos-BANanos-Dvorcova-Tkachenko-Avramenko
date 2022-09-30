@@ -5,25 +5,25 @@ using UnityEngine.UI;
 
 public class CoinCounter : MonoBehaviour
 {
-    static public int coinCount; //Кол-во монеток
-    public Text Text; //Публичное поле с текстом
+    static public int coinCount; //ГЉГ®Г«-ГўГ® Г¬Г®Г­ГҐГІГ®ГЄ
+    public Text Text; //ГЏГіГЎГ«ГЁГ·Г­Г®ГҐ ГЇГ®Г«ГҐ Г± ГІГҐГЄГ±ГІГ®Г¬
 
-    void Start() //Обрабатывается перед отрисовкой кадра
+    void Start() //ГЋГЎГ°Г ГЎГ ГІГ»ГўГ ГҐГІГ±Гї ГЇГҐГ°ГҐГ¤ Г®ГІГ°ГЁГ±Г®ГўГЄГ®Г© ГЄГ Г¤Г°Г 
     {
-        coinCount = 0; //Определяем начальное кол-во монеток
+        coinCount = 0; //ГЋГЇГ°ГҐГ¤ГҐГ«ГїГҐГ¬ Г­Г Г·Г Г«ГјГ­Г®ГҐ ГЄГ®Г«-ГўГ® Г¬Г®Г­ГҐГІГ®ГЄ
     }
-    void OnTriggerEnter(Collider Collider) //При срабатывании триггера
+    void OnTriggerEnter(Collider Collider) //ГЏГ°ГЁ Г±Г°Г ГЎГ ГІГ»ГўГ Г­ГЁГЁ ГІГ°ГЁГЈГЈГҐГ°Г 
     {
-        if (Collider.CompareTag("Coin")) //Если объект с триггером имеет тэг "Coin"
+        if (Collider.CompareTag("Coin")) //Г…Г±Г«ГЁ Г®ГЎГєГҐГЄГІ Г± ГІГ°ГЁГЈГЈГҐГ°Г®Г¬ ГЁГ¬ГҐГҐГІ ГІГЅГЈ "Coin"
         {
-            Collider.gameObject.GetComponent<Collider>().enabled = false; //Отключаем его коллайдер
-            Destroy(Collider.gameObject); //Уничтожаем его
-            coinCount++; //Прибавляем монетку
-            Text.text = coinCount.ToString(); //Записываем в счетчик
-            if (coinCount%10 == 0) //Если количество монеток кратно 10
+            Collider.gameObject.GetComponent<Collider>().enabled = false; //ГЋГІГЄГ«ГѕГ·Г ГҐГ¬ ГҐГЈГ® ГЄГ®Г«Г«Г Г©Г¤ГҐГ°
+            Destroy(Collider.gameObject); //Г“Г­ГЁГ·ГІГ®Г¦Г ГҐГ¬ ГҐГЈГ®
+            coinCount++; //ГЏГ°ГЁГЎГ ГўГ«ГїГҐГ¬ Г¬Г®Г­ГҐГІГЄГі
+            Text.text = coinCount.ToString(); //Г‡Г ГЇГЁГ±Г»ГўГ ГҐГ¬ Гў Г±Г·ГҐГІГ·ГЁГЄ
+            if (coinCount%10 == 0) //Г…Г±Г«ГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г¬Г®Г­ГҐГІГ®ГЄ ГЄГ°Г ГІГ­Г® 10
             {
-                HealthCounter.healthCount++; //Добавляем к ХП единицу
-                HealthCounter.FindObjectOfType<Text>().text = HealthCounter.healthCount.ToString(); //Записываем в счетчик
+                HealthCounter.healthCount++; //Г„Г®ГЎГ ГўГ«ГїГҐГ¬ ГЄ Г•ГЏ ГҐГ¤ГЁГ­ГЁГ¶Гі
+                HealthCounter.FindObjectOfType<Text>().text = HealthCounter.healthCount.ToString(); //Г‡Г ГЇГЁГ±Г»ГўГ ГҐГ¬ Гў Г±Г·ГҐГІГ·ГЁГЄ( РџРѕ РєР°РєРѕР№-С‚Рѕ РїСЂРёС‡РёРЅРµ РїРµСЂСЃС‚Р°Р»Рѕ СЂР°Р±РѕС‚Р°С‚СЊ))) )
             }
         }
 
