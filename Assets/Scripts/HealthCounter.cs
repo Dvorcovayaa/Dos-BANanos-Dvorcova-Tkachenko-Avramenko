@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthCounter : MonoBehaviour
 {
     static public int healthCount; //Кол-во ХП
     public Text Text; //Публичное поле с текстом
+    public AudioSource AudioSource; //Обозначаем AudioSource
 
     void Start() //Обрабатывается перед отрисовкой кадра
     {
@@ -20,9 +22,11 @@ public class HealthCounter : MonoBehaviour
             Destroy(Collider.gameObject); //Уничтожаем его
             healthCount--; //Убавляем ХП на единицу
             Text.text = healthCount.ToString(); //Записываем в счетчик
-            if(healthCount <= 0) //Если ХП меньше или равен нулю
+            AudioSource.Play(); //Воспроизводим звук
+            if (healthCount <= 0) //Если ХП меньше или равен нулю
             {
                 Destroy(this.gameObject); //Уничтожаем персонажа
+                SceneManager.LoadScene(2); //Открываем сцену
             }
         }
     }
